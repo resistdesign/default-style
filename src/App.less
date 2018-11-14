@@ -7,21 +7,32 @@ body,
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: flex-start;
   overflow: hidden;
   font-family: sans-serif;
 }
 
 :local(.App) {
-  width: 100vw;
   padding: 4em;
+  font-size: 0.5em;
+
+  .Row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 
   .Box {
     box-sizing: border-box;
     background: linear-gradient(to bottom, #efefef 0%, #ffffff 10%, #ffffff 100%);
     border-left: solid 0.5px #dddddd;
     border-top: solid 0.5px #dddddd;
+
+    & > .Box {
+      margin-left: 1em;
+    }
   }
 
   input {

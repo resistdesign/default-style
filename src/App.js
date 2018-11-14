@@ -17,6 +17,48 @@ export class App extends PureComponent {
             type='text'
             defaultValue='Demo Text Input'
           />
+          <div
+            className='Box'
+          >
+            <input
+              type='text'
+              defaultValue='Demo Text Input'
+            />
+            <div
+              className='Row'
+            >
+              <div
+                className='Box'
+              >
+                <input
+                  type='text'
+                  defaultValue='Demo Text Input'
+                />
+              </div>
+              <div>
+                &nbsp;
+              </div>
+              <div
+                className='Box'
+              >
+                <input
+                  type='text'
+                  defaultValue='Demo Text Input'
+                />
+              </div>
+              <div>
+                &nbsp;
+              </div>
+              <div
+                className='Box'
+              >
+                <input
+                  type='text'
+                  defaultValue='Demo Text Input'
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <br/>
         <br/>
