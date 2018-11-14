@@ -7,7 +7,7 @@ body,
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
   font-family: sans-serif;
@@ -15,7 +15,7 @@ body,
 
 :local(.App) {
   padding: 4em;
-  font-size: 0.5em;
+  font-size: 0.75em;
 
   .Row {
     display: flex;
@@ -27,9 +27,21 @@ body,
   .Box {
     box-sizing: border-box;
     background: linear-gradient(to bottom, #efefef 0%, #ffffff 10%, #ffffff 100%);
-    border-left: solid 0.5px #dddddd;
     border-top: solid 0.5px #dddddd;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 
+    &:before {
+      content: '';
+      width: 0.5px;
+      height: 1.5em;
+      background: #dddddd;
+      position: absolute;
+    }
+
+    & > .Row,
     & > .Box {
       margin-left: 1em;
     }
@@ -50,7 +62,8 @@ body,
     box-sizing: border-box;
     margin: 0;
     padding: 0.5em;
-    font-size: 1em;
     display: inline-block;
+    font-size: 1.25em;
+    color: #000000;
   }
 }
