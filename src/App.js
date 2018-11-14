@@ -63,6 +63,20 @@ export class App extends PureComponent {
             Demo Code Text
           </code>
         </div>
+        <br/>
+        <details>
+          <summary>Key:</summary>
+          <dd>
+            <details>
+              <summary>Key:</summary>
+              <dd><code>Value</code></dd>
+            </details>
+            <details>
+              <summary>Key:</summary>
+              <dd><code>Value</code></dd>
+            </details>
+          </dd>
+        </details>
       </div>
     );
   }
