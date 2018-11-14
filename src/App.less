@@ -18,43 +18,69 @@ body,
   font-size: 0.75em;
 
   .Row {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 0.5em;
   }
 
   .Box {
     box-sizing: border-box;
-    background: linear-gradient(to bottom, #efefef 0%, #ffffff 10%, #ffffff 100%);
-    border-top: solid 0.5px #dddddd;
+    background: linear-gradient(to bottom, #fafafa 0%, #ffffff 10%, #ffffff 100%);
+    border-top: solid 0.25em #dddddd;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    margin: 0;
+    padding: 0;
 
     &:before {
       content: '';
-      width: 0.5px;
+      width: 0.25em;
       height: 1.5em;
       background: #dddddd;
       position: absolute;
+      margin: -0.25em 0 0 -0.25em;
     }
 
     & > .Row,
     & > .Box {
-      margin-left: 1em;
+      margin-top: 0.5em;
+      margin-left: 0.5em;
     }
   }
 
   input {
-    background: none;
+    background-color: #eeeeee;
+    color: #777777;
     appearance: none;
     border: solid 0 #000000;
     box-sizing: border-box;
     margin: 0;
     padding: 0.5em;
     font-size: 1em;
+
+    &:focus {
+      outline: none;
+      background: none;
+      color: unset;
+
+      border-bottom: solid 0.25em rgba(221, 221, 221, 1);
+      margin-bottom: -0.25em;
+      animation: InputFocusBorderAnimation 1s forwards infinite ease-in-out;
+
+      @keyframes InputFocusBorderAnimation {
+        0% {
+          border-bottom: solid 0.25em rgba(221, 221, 221, 1);
+        }
+        50% {
+          border-bottom: solid 0.25em rgba(221, 221, 221, 0);
+        }
+        100% {
+          border-bottom: solid 0.25em rgba(221, 221, 221, 1);
+        }
+      }
+    }
   }
 
   code {

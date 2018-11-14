@@ -35,9 +35,6 @@ export class App extends PureComponent {
                   defaultValue='Demo Text Input'
                 />
               </div>
-              <div>
-                &nbsp;
-              </div>
               <div
                 className='Box'
               >
@@ -45,9 +42,6 @@ export class App extends PureComponent {
                   type='text'
                   defaultValue='Demo Text Input'
                 />
-              </div>
-              <div>
-                &nbsp;
               </div>
               <div
                 className='Box'
