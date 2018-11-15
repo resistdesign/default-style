@@ -1,14 +1,14 @@
 {
-  "name": "default-style",
-  "version": "1.0.0",
-  "description": "",
+  "name": "resistdesign-default-style",
+  "version": "0.0.0",
+  "description": "A default style for data output.",
   "main": "./src/default-style.less",
   "scripts": {
     "build": "rdx compile -o docs && cp ./CNAME ./docs/CNAME"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
