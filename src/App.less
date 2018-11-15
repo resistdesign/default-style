@@ -7,15 +7,15 @@ body,
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: flex-start;
+  flex-wrap: wrap;
   overflow: hidden;
   font-family: sans-serif;
 }
 
 :local(.App) {
   padding: 2em;
-  font-size: 0.75em;
 
   details {
     & > summary {
@@ -45,9 +45,24 @@ body,
   }
 
   .Row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+    & > * {
+      flex: 1;
+    }
+
+    & > details,
+    & > .Box {
+      margin-left: 0.5em;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 
   details,
@@ -57,20 +72,13 @@ body,
     border-top: solid 0.25em #dddddd;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: stretch;
+    justify-content: stretch;
     margin: 0;
     padding: 0;
 
-    &.Filled {
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
-      justify-content: stretch;
-
-      & > * {
-        flex: 1;
-      }
+    & > * {
+      flex: 1;
     }
 
     &:before {
@@ -85,6 +93,10 @@ body,
     details,
     & .Box {
       margin-top: 0.5em;
+      margin-left: 0.5em;
+    }
+
+    & .Row {
       margin-left: 0.5em;
     }
   }

@@ -93,21 +93,28 @@ export class App extends PureComponent {
           className='Row'
         >
           <div
-            className='Box Filled'
+            className='Box'
           >
             <button>
               A Button
             </button>
           </div>
           <div
-            className='Box Filled'
+            className='Box'
           >
             <button>
               A Button
             </button>
           </div>
           <div
-            className='Box Filled'
+            className='Box'
+          >
+            <button>
+              A Button
+            </button>
+          </div>
+          <div
+            className='Box'
           >
             <button>
               A Button
