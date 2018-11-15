@@ -1,6 +1,6 @@
 {
   "name": "resistdesign-default-style",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A default style for data output.",
   "main": "./src/default-style.less",
   "scripts": {
