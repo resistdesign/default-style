@@ -14,15 +14,32 @@ body,
 }
 
 :local(.App) {
-  padding: 4em;
+  padding: 2em;
   font-size: 0.75em;
 
   details {
     & > summary {
       color: #777777;
+      padding: 0.25em;
 
       &:focus {
         outline: none;
+
+        border-bottom: solid 0.25em rgba(221, 221, 221, 1);
+        margin-bottom: -0.25em;
+        animation: SummaryFocusAnimation 1s forwards infinite ease-in-out;
+
+        @keyframes SummaryFocusAnimation {
+          0% {
+            border-bottom: solid 0.25em rgba(221, 221, 221, 1);
+          }
+          50% {
+            border-bottom: solid 0.25em rgba(221, 221, 221, 0);
+          }
+          100% {
+            border-bottom: solid 0.25em rgba(221, 221, 221, 1);
+          }
+        }
       }
     }
   }
@@ -33,6 +50,7 @@ body,
     grid-gap: 0.5em;
   }
 
+  details,
   .Box {
     box-sizing: border-box;
     background: linear-gradient(to bottom, #fafafa 0%, #ffffff 10%, #ffffff 100%);
@@ -64,8 +82,9 @@ body,
       margin: -0.25em 0 0 -0.25em;
     }
 
-    & > .Row,
-    & > .Box {
+    details,
+    & .Row,
+    & .Box {
       margin-top: 0.5em;
       margin-left: 0.5em;
     }
@@ -82,9 +101,12 @@ body,
     font-size: 1em;
     cursor: pointer;
 
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
     &:focus {
       outline: none;
 
+      transition: none;
       animation: ButtonFocusBackgroundAnimation 1s forwards infinite ease-in-out;
 
       @keyframes ButtonFocusBackgroundAnimation {
@@ -101,6 +123,13 @@ body,
           color: #ffffff;
         }
       }
+    }
+
+    &:active {
+      background-color: #ffffff;
+      color: unset;
+
+      animation: none;
     }
   }
 

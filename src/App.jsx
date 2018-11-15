@@ -55,7 +55,6 @@ export class App extends PureComponent {
           </div>
         </div>
         <br/>
-        <br/>
         <div
           className='Box'
         >
@@ -64,40 +63,30 @@ export class App extends PureComponent {
           </code>
         </div>
         <br/>
-        <details>
-          <summary className='Box'>Key:</summary>
-          <dl>
-            <dd>
-              <div
-                className='Box'
-              >
-                <details>
-                  <summary className='Box'>Key:</summary>
-                  <dl>
-                    <dd>
-                      <div
-                        className='Box'
-                      >
-                        <code>Value</code>
-                      </div>
-                    </dd>
-                  </dl>
-                </details>
-                <details>
-                  <summary className='Box'>Key:</summary>
-                  <dl>
-                    <dd>
-                      <div
-                        className='Box'
-                      >
-                        <code>Value</code>
-                      </div>
-                    </dd>
-                  </dl>
-                </details>
-              </div>
-            </dd>
-          </dl>
+        <details
+          open
+        >
+          <summary>Key:</summary>
+          <details
+            open
+          >
+            <summary>Key:</summary>
+            <div
+              className='Box'
+            >
+              <code>Value</code>
+            </div>
+          </details>
+          <details
+            open
+          >
+            <summary>Key:</summary>
+            <div
+              className='Box'
+            >
+              <code>Value</code>
+            </div>
+          </details>
         </details>
         <br/>
         <div
