@@ -2,7 +2,7 @@
   "name": "default-style",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/default-style.less",
   "scripts": {
     "build": "rdx compile -o docs && cp ./CNAME ./docs/CNAME"
   },

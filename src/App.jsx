@@ -1,3 +1,4 @@
+import './default-style.less';
 import {hot} from 'react-hot-loader';
 import React, {PureComponent} from 'react';
 import Style from './App.less';
@@ -7,65 +8,49 @@ const {App: ClassName} = Style;
 export class App extends PureComponent {
   render() {
     return (
-      < div
+      <main
         className={`App ${ClassName}`}
       >
-        <div
-          className='Box'
-        >
+        <div>
           <input
             type='text'
             defaultValue='Demo Text Input'
           />
-          <div
-            className='Box'
-          >
+          <div>
             <input
               type='number'
               defaultValue={7}
             />
-            <div
-              className='Row'
-            >
-              <div
-                className='Box'
-              >
+            <section>
+              <div>
                 <input
                   type='text'
                   defaultValue='Demo Text Input'
                 />
               </div>
-              <div
-                className='Box'
-              >
+              <div>
                 <input
                   type='text'
                   defaultValue='Demo Text Input'
                 />
               </div>
-              <div
-                className='Box'
-              >
+              <div>
                 <input
                   type='text'
                   defaultValue='Demo Text Input'
                 />
               </div>
-            </div>
+            </section>
           </div>
         </div>
         <br/>
-        <div
-          className='Box'
-        >
+        <div>
           <code>
             Demo Code Text
           </code>
         </div>
         <br/>
-        <div
-          className='Box'
-        >
+        <div>
           <textarea
             defaultValue={`Demo Text Block
 AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG
@@ -83,9 +68,7 @@ AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG`}
             open
           >
             <summary>Key:</summary>
-            <div
-              className='Box'
-            >
+            <div>
               <code>Value</code>
             </div>
           </details>
@@ -93,9 +76,7 @@ AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG`}
             open
           >
             <summary>Key:</summary>
-            <div
-              className='Box'
-            >
+            <div>
               <pre>
                 {`Multiple
 Line
@@ -105,39 +86,29 @@ Value`}
           </details>
         </details>
         <br/>
-        <div
-          className='Row'
-        >
-          <div
-            className='Box'
-          >
+        <section>
+          <div>
             <button>
               A Button
             </button>
           </div>
-          <div
-            className='Box'
-          >
+          <div>
             <button>
               A Button
             </button>
           </div>
-          <div
-            className='Box'
-          >
+          <div>
             <button>
               A Button
             </button>
           </div>
-          <div
-            className='Box'
-          >
+          <div>
             <button>
               A Button
             </button>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     );
   }
 }
