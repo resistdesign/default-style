@@ -21,8 +21,8 @@ export class App extends PureComponent {
             className='Box'
           >
             <input
-              type='text'
-              defaultValue='Demo Text Input'
+              type='number'
+              defaultValue={7}
             />
             <div
               className='Row'
@@ -61,6 +61,18 @@ export class App extends PureComponent {
           <code>
             Demo Code Text
           </code>
+        </div>
+        <br/>
+        <div
+          className='Box'
+        >
+          <textarea
+          >
+            {`Demo Text Block
+AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG
+AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG
+AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG`}
+          </textarea>
         </div>
         <br/>
         <details

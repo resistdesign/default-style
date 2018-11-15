@@ -10,7 +10,7 @@ body,
   align-items: stretch;
   justify-content: flex-start;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow: auto;
   font-family: sans-serif;
 }
 
@@ -20,7 +20,7 @@ body,
   details {
     & > summary {
       color: #777777;
-      padding: 0.25em;
+      padding: 1em;
 
       &:focus {
         outline: none;
@@ -67,6 +67,7 @@ body,
 
   details,
   .Box {
+    position: relative;
     box-sizing: border-box;
     background: linear-gradient(to bottom, #fafafa 0%, #ffffff 10%, #ffffff 100%);
     border-top: solid 0.25em #dddddd;
@@ -108,7 +109,7 @@ body,
     border: solid 0 #000000;
     box-sizing: border-box;
     margin: 0;
-    padding: 0.5em;
+    padding: 2em;
     font-size: 1em;
     cursor: pointer;
 
@@ -144,6 +145,12 @@ body,
     }
   }
 
+  textarea {
+    min-height: 9em;
+    resize: none;
+  }
+
+  textarea,
   input {
     background-color: #eeeeee;
     color: #777777;
@@ -151,7 +158,7 @@ body,
     border: solid 0 #000000;
     box-sizing: border-box;
     margin: 0;
-    padding: 0.5em;
+    padding: 1em;
     font-size: 1em;
 
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
@@ -183,7 +190,7 @@ body,
     background: none;
     box-sizing: border-box;
     margin: 0;
-    padding: 0.5em;
+    padding: 1em;
     display: inline-block;
     font-size: 1.25em;
     color: #000000;
