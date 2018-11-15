@@ -17,6 +17,16 @@ body,
   padding: 4em;
   font-size: 0.75em;
 
+  details {
+    & > summary {
+      color: #777777;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
   .Row {
     display: grid;
     grid-auto-flow: column;
@@ -34,6 +44,17 @@ body,
     margin: 0;
     padding: 0;
 
+    &.Filled {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: stretch;
+
+      & > * {
+        flex: 1;
+      }
+    }
+
     &:before {
       content: '';
       width: 0.25em;
@@ -50,6 +71,39 @@ body,
     }
   }
 
+  button {
+    background-color: #aaaaaa;
+    color: #ffffff;
+    appearance: none;
+    border: solid 0 #000000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+
+      animation: ButtonFocusBackgroundAnimation 1s forwards infinite ease-in-out;
+
+      @keyframes ButtonFocusBackgroundAnimation {
+        0% {
+          background-color: #aaaaaa;
+          color: #ffffff;
+        }
+        50% {
+          background-color: #ffffff;
+          color: unset;
+        }
+        100% {
+          background-color: #aaaaaa;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
   input {
     background-color: #eeeeee;
     color: #777777;
@@ -59,6 +113,8 @@ body,
     margin: 0;
     padding: 0.5em;
     font-size: 1em;
+
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
     &:focus {
       outline: none;
