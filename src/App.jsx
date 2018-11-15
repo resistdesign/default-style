@@ -67,11 +67,11 @@ export class App extends PureComponent {
           className='Box'
         >
           <textarea
-          >
-            {`Demo Text Block
+            defaultValue={`Demo Text Block
 AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG
 AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG
 AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG`}
+          >
           </textarea>
         </div>
         <br/>
@@ -96,7 +96,11 @@ AAA BBB CCC DDD EEE FFF GGG AAA BBB CCC DDD EEE FFF GGG`}
             <div
               className='Box'
             >
-              <code>Value</code>
+              <pre>
+                {`Multiple
+Line
+Value`}
+              </pre>
             </div>
           </details>
         </details>

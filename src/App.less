@@ -67,9 +67,9 @@ body,
 
   details,
   .Box {
+    background-color: #ffffff;
     position: relative;
     box-sizing: border-box;
-    background: linear-gradient(to bottom, #fafafa 0%, #ffffff 10%, #ffffff 100%);
     border-top: solid 0.25em #dddddd;
     display: flex;
     flex-direction: column;
@@ -192,13 +192,21 @@ body,
     }
   }
 
+  pre,
   code {
-    background: none;
     box-sizing: border-box;
+    background-color: #f7f7f7;
     margin: 0;
-    padding: 1em;
+    padding: 0.75em;
     display: inline-block;
     font-size: 1.25em;
     color: #000000;
+
+    &::before {
+      content: '>';
+      height: 100%;
+      color: #cccccc;
+      margin-right: 0.5em;
+    }
   }
 }
