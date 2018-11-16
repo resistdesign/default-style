@@ -2,9 +2,13 @@
   "name": "resistdesign-default-style",
   "version": "1.0.0",
   "description": "A default style for data output.",
-  "main": "./src/default-style.less",
+  "main": "./dist/default-style.less.css",
+  "files": [
+    "dist/default-style.less.css"
+  ],
   "scripts": {
-    "build": "rdx compile -o docs && cp ./CNAME ./docs/CNAME"
+    "build": "rdx compile -o docs && cp ./CNAME ./docs/CNAME",
+    "dist": "rdx compile -a ./src/dist.html -o dist"
   },
   "author": "",
   "license": "ISC",
